@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <fstream>
 
 class Config
 {
@@ -8,6 +9,10 @@ private:
 	int port = 8080;
 	std::string rootDir = "./files";
 	std::string webDir = "./web";
+	std::string logFile = "server.log";
+	bool enable_cors = true;
+	bool enable_logging = true;
+	std::ifstream* file;
 public:
 	Config();
 
